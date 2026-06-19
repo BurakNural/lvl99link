@@ -1,0 +1,107 @@
+/* Genel Ayarlar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Görseldeki gibi koyu kahve/siyah gradyan arka plan */
+    background: radial-gradient(circle at center, #2d1c08 0%, #0d0d0d 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Kartlar arası boşluk */
+}
+
+/* Kart Tasarımı */
+.card {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(212, 163, 115, 0.25); /* Hafif altın rengi çerçeve */
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 163, 115, 0.6);
+}
+
+/* Fotoğraf Alanı */
+.image-box {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid #d4a373; /* Altın sarısı dış halka */
+    box-shadow: 0 0 15px rgba(212, 163, 115, 0.3);
+}
+
+.image-box img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+/* Yazı Stilleri */
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 13px;
+    color: #b0b0b0;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+/* Buton Tasarımı */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: transparent;
+    border: 2px solid #d4a373;
+    color: #d4a373;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: #d4a373;
+    color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(212, 163, 115, 0.4);
+}
+
+/* Mobil için ufak dokunuş */
+@media (max-width: 400px) {
+    .card { padding: 20px 15px; }
+    h2 { font-size: 18px; }
+}
